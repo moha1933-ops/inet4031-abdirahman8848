@@ -8,6 +8,8 @@ Runs the incident tracker and a PostgreSQL database as a two-service Compose sta
 - A `.env` file in `week-4/` (copy `.env.example` and fill in real values)
 
 ## Run it
+kubectl apply -f .
+Docker Compose is stopped, and Kubernetes now runs the application.
 ```bash
 docker compose up -d --build
 ```
