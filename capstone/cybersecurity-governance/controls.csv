@@ -1,0 +1,9 @@
+id,area,control,test,expected,status,evidence
+IMG-01,Image,Container image is scanned for vulnerabilities,Trivy image scan,Image vulnerability report is produced,Pass,evidence/trivy-image-before.json
+IMG-02,Image,Container image has no CRITICAL vulnerabilities,Review Trivy CRITICAL findings,Zero CRITICAL vulnerabilities,Pass,evidence/trivy-image-before.json
+REP-01,Repo,Repository is scanned for secrets,Gitleaks full Git history scan,Zero unresolved secrets,Pass,evidence/gitleaks-report.json
+K8S-01,Kubernetes Workload,Web container runs as non-root,Review workload configuration,run_as_non_root is enabled,Pass,evidence/checkov-before.json
+K8S-02,Kubernetes Workload,Containers have security configuration,Checkov and kube-score scans,Workloads follow configured security controls,Fail,evidence/kube-score.txt
+NET-01,Network,Database traffic is protected by NetworkPolicy,kubectl get networkpolicy,db-clients NetworkPolicy exists,Pass,evidence/environment-checkpoint.txt
+PROC-01,Process,Default branch is protected,GitHub ruleset check,protect-master ruleset is active,Pass,evidence/environment-checkpoint.txt
+PROC-02,Process,Infrastructure configuration is security scanned,Checkov and Trivy config scans,Security scan reports are produced,Pass,evidence/checkov-before.json
