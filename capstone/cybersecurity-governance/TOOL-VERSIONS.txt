@@ -1,0 +1,16 @@
+=== Cybersecurity & Governance Tool Versions ===
+
+Trivy:
+Version: 0.76.1
+
+gitleaks:
+8.30.0
+
+kube-score:
+kube-score version: 1.20.0, commit: 81371e9f53b633bec69423fc298295bd71bd869a, built: 2025-04-28T16:54:40Z
+
+Checkov:
+3.4.6
+
+Lynis:
+3.1.6
